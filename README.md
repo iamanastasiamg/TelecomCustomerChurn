@@ -54,5 +54,5 @@ node index.js
 Example:
 ```bash
 git clone https://github.com/iamanastasiamg/TelecomCustomerChurn.git
-cd project-name
+cd TelecomCustomerChurn
 npm install
