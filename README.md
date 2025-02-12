@@ -1,6 +1,6 @@
 # Telecom Customer Churn 🚀
 
-## Table of Contents 📑
+### Table of Contents 📑
 - [Description](#Description) ✨
 - [Features](#Features) ⬇️
 - [Installation](#Installation) 🛠️
@@ -40,11 +40,11 @@ This dataset comes from an Iranian telecom company, with each row representing a
 
 pip install -r requirements.txt
 
-### Prerequisites 📦
+## Prerequisites 📦
 
 - Python
 
-### Steps 📝
+## Steps 📝
 
 1. Clone the repository: `git clone https://github.com/iamanastasiamg/TelecomCustomerChurn.git`
 2. Install dependencies: `npm install`
