@@ -14,6 +14,7 @@ A telecom company wants to know whether a customer will churn. They also want to
 - 🗺️ Explore: Which age groups send more SMS messages than make phone calls?
 - 📊 Visualize: Create a plot visualizing the number of distinct phone calls by age group. Within the chart, differentiate between short, medium, and long calls (by the number of seconds).
 - 🔎 Analyze: Are there significant differences between the length of phone calls between different tariff plans?
+
 This dataset comes from an Iranian telecom company, with each row representing a customer over a year period. Along with a churn label, there is information on the customers' activity, such as call failures and subscription length.
 
 ## Features ⬇️
