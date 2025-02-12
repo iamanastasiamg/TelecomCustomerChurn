@@ -37,12 +37,15 @@ This dataset comes from an Iranian telecom company, with each row representing a
 | Churn                     | class label (1: churn, 0: non-churn)
 
 ## Installation ⚙️
+
 pip install -r requirements.txt
 
 ### Prerequisites 📦
+
 - Python
 
 ### Steps 📝
+
 1. Clone the repository: `git clone https://github.com/iamanastasiamg/TelecomCustomerChurn.git`
 2. Install dependencies: `npm install`
 3. Run the project: `npm start`
