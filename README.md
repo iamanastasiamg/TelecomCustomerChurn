@@ -1,10 +1,10 @@
 # Telecom Customer Churn 🚀
 
 ## Table of Contents 📑
-- [Description](#description) ✨
-- [Features](#features) ⬇️
-- [Installation](#installation) 🛠️
-- [Usage](#usage) 📖
+- [Description](#Description) ✨
+- [Features](#Features) ⬇️
+- [Installation](#Installation) 🛠️
+- [Usage](#Usage) 📖
 
 ## Description ✨
 
