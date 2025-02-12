@@ -4,7 +4,9 @@
 - [Description](#Description) ✨
 - [Features](#Features) ⬇️
 - [Installation](#Installation) 🛠️
-- [Usage](#Usage) 📖
+- [Prerequisites](#Prerequisites) 📦
+- [Steps](#Steps) 📝
+- [Usage](#Usage) 💻
 
 ## Description ✨
 
