@@ -55,3 +55,22 @@ plt.figure(figsize=(15, 10))
 sns.heatmap(churn_df.corr(), annot=True, fmt='.2f', cmap='Pastel2', linewidths=2)
 plt.title('Correlation Heatmap')
 plt.show()
+
+"""
+Explore: Which age groups send more SMS messages than make phone calls?
+"""
+
+# Calculate the total SMS and call frequency per age group
+freq_sms = churn_df.groupby('age_group')['freq_of_sms'].sum()
+freq_calls = churn_df.groupby('age_group')['freq_of_use'].sum()
+
+# List to store the age groups that send more SMS than make calls
+sends_more_sms = []
+
+# Iterate over each unique age group
+for group in churn_df['age_group'].unique():
+    if freq_sms[group] > freq_calls[group]:
+        sends_more_sms.append(group.item())
+        
+# Output the result
+print("These age groups send more SMS messages than make phone calls:\n", sends_more_sms)
