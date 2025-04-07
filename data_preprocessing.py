@@ -71,6 +71,39 @@ sends_more_sms = []
 for group in churn_df['age_group'].unique():
     if freq_sms[group] > freq_calls[group]:
         sends_more_sms.append(group.item())
-        
+
 # Output the result
 print("These age groups send more SMS messages than make phone calls:\n", sends_more_sms)
+
+"""
+Visualize: Create a plot visualizing the number of distinct phone calls by age group. Within the chart, differentiate between short, medium, and long calls (by the number of seconds).
+"""
+# Calculate mean of 'seconds_of_use' to differentiate short, medium, and long calls
+mean_use = churn_df['seconds_of_use'].mean()
+
+# Function to categorize the call duration
+def get_call_rate(value):
+    if value < mean_use:
+        return 'low'  # short call
+    elif mean_use <= value < churn_df['seconds_of_use'].max():
+        return 'medium'  # medium-length call
+    else:
+        return 'high'  # long call
+
+# Apply the function to the 'seconds_of_use' column
+churn_df['call_duration'] = churn_df['seconds_of_use'].apply(get_call_rate)
+
+# Group data by 'age_group' and 'call_duration' (after applying the 'get_call_rate' function)
+phone_calls_grouped = churn_df.groupby(['age_group', 'call_duration']).size().unstack()
+
+# Define colors for different call durations
+colors = {'low': 'green', 'medium': 'orange', 'high': 'red'}
+
+# Plot the stacked bar chart
+phone_calls_grouped.plot(kind='bar', stacked=True, cmap='RdYlGn_r', legend=False)
+plt.xlabel('Age Group')
+plt.ylabel('Number of Distinct Phone Calls')
+plt.title('Number of Distinct Phone Calls by Age Group')
+plt.legend(colors.keys(), title='Call Duration')
+plt.tight_layout()
+plt.show()
